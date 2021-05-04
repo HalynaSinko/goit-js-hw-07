@@ -18,7 +18,12 @@ const images = [
 
 const galleryEl = document.querySelector('#gallery');
 
-const makeImg = images.map(image => `<li><img src="${image.url}" alt="${image.alt}"></li>`).join('');
+const makeImg = images
+  .map(
+    image =>
+      `<li><img src="${image.url}" alt="${image.alt}" width="auto" height="200px";></li>`,
+  )
+  .join('');
   
 galleryEl.insertAdjacentHTML('afterbegin', makeImg);
 galleryEl.classList.add('gallery');
